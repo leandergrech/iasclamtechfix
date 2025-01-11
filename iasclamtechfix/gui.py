@@ -69,7 +69,8 @@ def start_conversion(input_dir, logo_path, output_dir):
 
 # Create the Tkinter GUI
 root = tk.Tk()
-root.title("PDF Logo Replacer")
+root.iconbitmap("icon.ico")
+root.title("iAS PDF Logo Replacer")
 
 # Load previous settings
 settings = load_settings()
@@ -77,7 +78,7 @@ input_dir = settings.get("input_dir", "")
 logo_path = settings.get("logo_path", "")
 output_dir = settings.get("output_dir", "")
 
-tk.Label(root, text="Input Directory (PDFs):").grid(row=0, column=0, padx=10, pady=5, sticky="w")
+tk.Label(root, text="Input Directory (containing iAS PDFs):").grid(row=0, column=0, padx=10, pady=5, sticky="w")
 input_dir_entry = tk.Entry(root, width=50)
 input_dir_entry.insert(0, input_dir)
 input_dir_entry.grid(row=0, column=1, padx=10, pady=5)
